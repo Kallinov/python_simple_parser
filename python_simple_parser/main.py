@@ -22,7 +22,7 @@ with sync_playwright() as p:
 
     cards = page.query_selector_all('.tile-root') # Getting all cards by class name
 
-    print(len(cards))
+    print(f'AMOUNT OF CARDS: {len(cards)}')
 
     for item in cards:
         price = item.query_selector('.c35_3_12-a1')
@@ -34,3 +34,4 @@ with sync_playwright() as p:
         print(f'LINK: https://www.ozon.ru{link}\n\n')
 
     context.close()
+
